@@ -187,7 +187,7 @@ function processRequest()
     tumblr_catalog=${tumblr_sites[0]}
 
 	#
-	#	check for existing of the tumblr_catalog
+	#	check for existance of the tumblr_catalog
 	#
 	
     if [ -f "/data/${TUMBLR_LISTS}/${tumblr_catalog}" ]

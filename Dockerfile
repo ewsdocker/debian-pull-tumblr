@@ -7,15 +7,15 @@
 # =========================================================================
 #
 # @author Jay Wheeler.
-# @version 9.5.2
-# @copyright © 2017, 2018. EarthWalk Software.
+# @version 9.6.0
+# @copyright © 2017, 2018, 2019. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
 # @package ewsdocker/debian-pull-tumblr
 # @subpackage Dockerfile
 #
 # =========================================================================
 #
-#	Copyright © 2017, 2018. EarthWalk Software
+#	Copyright © 2017, 2018, 2019. EarthWalk Software
 #	Licensed under the GNU General Public License, GPL-3.0-or-later.
 #
 #   This file is part of ewsdocker/debian-pull-tumblr.
@@ -36,7 +36,7 @@
 #
 # =========================================================================
 # =========================================================================
-FROM ewsdocker/debian-base:9.5.6
+FROM ewsdocker/debian-base:9.6.0
 
 MAINTAINER Jay Wheeler <earthwalksoftware@gmail.com>
 
@@ -44,12 +44,12 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # =========================================================================
 
-ENV LMSBUILD_VERSION="9.5.2" 
+ENV LMSBUILD_VERSION="9.6.0" 
 ENV LMSBUILD_NAME=debian-pull-tumblr 
 ENV LMSBUILD_REPO=ewsdocker 
 ENV LMSBUILD_REGISTRY="" 
 
-ENV LMSBUILD_PARENT="debian-base:9.5.6"
+ENV LMSBUILD_PARENT="debian-base:9.6.0"
 ENV LMSBUILD_DOCKER="${LMSBUILD_REPO}/${LMSBUILD_NAME}:${LMSBUILD_VERSION}" 
 ENV LMSBUILD_PACKAGE="${LMSBUILD_PARENT}, tumblr v. 0.1.0"
 

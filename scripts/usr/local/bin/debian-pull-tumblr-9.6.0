@@ -9,15 +9,15 @@
 # =========================================================================
 #
 # @author Jay Wheeler.
-# @version 9.5.2
-# @copyright © 2018. EarthWalk Software.
+# @version 9.6.0
+# @copyright © 2018, 2019. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
 # @package debian-pull-tumblr
 # @subpackage debian-pull-tumblr
 #
 # =========================================================================
 #
-#	Copyright © 2018. EarthWalk Software
+#	Copyright © 2018, 2019. EarthWalk Software
 #	Licensed under the GNU General Public License, GPL-3.0-or-later.
 #
 #   This file is part of ewsdocker/debian-pull-tumblr.
@@ -52,7 +52,7 @@ docker run --rm \
            -it \
            -v /etc/localtime:/etc/localtime:ro \
            -v /media/sf_ImageDownloads:/data \
-           -v ${HOME}/.config/docker/debian-pull-tumblr-9.5.2:/root \
-           --name=debian-pull-tumblr-9.5.2 \
-       ewsdocker/debian-pull-tumblr:9.5.2 lms-tumblr clipart-autumn
+           -v ${HOME}/.config/docker/debian-pull-tumblr-9.6.0:/root \
+           --name=debian-pull-tumblr-9.6.0 \
+       ewsdocker/debian-pull-tumblr:9.6.0 lms-tumblr clipart-autumn
 

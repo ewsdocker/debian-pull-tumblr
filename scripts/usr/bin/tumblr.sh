@@ -40,30 +40,8 @@ declare -a tumblr_sites=()
 declare    tumblr_filename
 
 # =========================================================================
-#
-#   lmsconDisplay
-#		display message on the console
-#
-#	parameters:
-#		message = message to display
-#       override = 1 to override lmsopt
-#	returns:
-#		0 = no errors
-#		non-zero = error code
-#
-# =========================================================================
-function lmsconDisplay()
-{
-    local lmscon_buffer="${1}"
 
-    local override=${2:-0}
-    local noret=${3:-""}
-
-    [[ ${LMSOPT_QUIET} -ne 0  &&  ${override} -eq 0 ]] && return 0
-    [[ -z "${noret}" ]] && echo "${lmscon_buffer}" || echo -n "${lmscon_buffer}"
-
-    return 0
-}
+. /usr/local/lib/lms/lmsconDisplay.sh
 
 # =========================================================================
 #
@@ -129,8 +107,9 @@ function downloadSite()
     if [ ! -d "${dsite}" ] 
     then
         mkdir -p ${dsite} >/dev/null 2>&1
-        chmod 777 ${dsite} >/dev/null 2>&1
     fi
+
+    chmod 777 ${dsite} >/dev/null 2>&1
 
     cd ${dsite}
 
@@ -197,9 +176,9 @@ function processRequest()
         if [ ! -d "/data/${TUMBLR_CATALOGS}/${tumblr_catalog}" ]
         then
             mkdir -p "/data/${TUMBLR_CATALOGS}/${tumblr_catalog}" >/dev/null 2>&1
-            chmod 775 "/data/${TUMBLR_CATALOGS}/${tumblr_catalog}" >/dev/null 2>&1
         fi
 
+        chmod 777 "/data/${TUMBLR_CATALOGS}/${tumblr_catalog}" >/dev/null 2>&1
 	    cd "/data/${TUMBLR_CATALOGS}/${tumblr_catalog}"
 
         cat "/data/${TUMBLR_LISTS}/${tumblr_catalog}" | while read tumblr_site

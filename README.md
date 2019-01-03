@@ -1,4 +1,4 @@
-## ewsdocker/debian-pull-tumblr:9.5.1  
+## debian-pull-tumblr:9.6.0  
 
 **A Tumblr blog gallery (album) downloader in a Docker image.**  
 
@@ -37,16 +37,16 @@ ____
 
 ____  
 
-**ewsdocker/debian-pull-tumblr:9.5.1**  
+**ewsdocker/debian-pull-tumblr:9.6.0**  
   
     docker run --rm \
                -v ${HOME}/bin:/userbin \
                -v ${HOME}/.local:/usrlocal \
                -e LMS_BASE="${HOME}/.local" \
                -v ${HOME}/.config/docker:/conf \
-               -v ${HOME}/.config/docker/debian-pull-tumblr-9.5.1:/root \
-               --name=debian-pull-tumblr-9.5.1 \
-           ewsdocker/debian-pull-tumblr:9.5.1 lms-setup  
+               -v ${HOME}/.config/docker/debian-pull-tumblr-9.6.0:/root \
+               --name=debian-pull-tumblr-9.6.0 \
+           ewsdocker/debian-pull-tumblr:9.6.0 lms-setup  
 
 ____  
   
@@ -79,15 +79,15 @@ ____
 
 ____  
 
-**ewsdocker/debian-pull-tumblr:9.5.1**
+**ewsdocker/debian-pull-tumblr:9.6.0**
   
     docker run --rm \
                -it \
                -v /etc/localtime:/etc/localtime:ro \
                -v /media/sf_ImageDownloads:/data \
-               -v ${HOME}/.config/docker/debian-pull-tumblr-9.5.1:/root \
-               --name=debian-pull-tumblr-9.5.1 \
-           ewsdocker/debian-pull-tumblr:9.5.1 lms-tumblr clipart-autumn  
+               -v ${HOME}/.config/docker/debian-pull-tumblr-9.6.0:/root \
+               --name=debian-pull-tumblr-9.6.0 \
+           ewsdocker/debian-pull-tumblr:9.6.0 lms-tumblr clipart-autumn  
 
 ____  
 Refer to [Mapping docker host resources to the docker container](https://github.com/ewsdocker/debian-pull-tumblr/wiki/QuickStart#mapping) for a discussion of customizing the executable scripts..  
@@ -102,17 +102,17 @@ ____
 
 **ewsdocker/debian-pull-tumblr:edge**  
 
-**edge** is the development tag for the **9.5.2** release tag.
+**edge** is the development tag for the **9.6.1** release tag.
 
     docker pull ewsdocker/debian-pull-tumblr:edge
-    docker tag ewsdocker/debian-pull-tumblr:edge ewsdocker/debian-pull-tumblr:9.5.2
+    docker tag ewsdocker/debian-pull-tumblr:edge ewsdocker/debian-pull-tumblr:9.6.1
     docker run -v ${HOME}/bin:/userbin \
                -v ${HOME}/.local:/usrlocal \
                -e LMS_BASE="${HOME}/.local" \
                -v ${HOME}/.config/docker:/conf \
-               -v ${HOME}/.config/docker/debian-pull-tumblr-9.5.2:/root \
-               --name=debian-pull-tumblr-9.5.2 \
-           ewsdocker/debian-pull-tumblr:9.5.2 lms-setup  
+               -v ${HOME}/.config/docker/debian-pull-tumblr-9.6.1:/root \
+               --name=debian-pull-tumblr-9.6.1 \
+           ewsdocker/debian-pull-tumblr:9.6.1 lms-setup  
 
 optional step:
 
@@ -120,7 +120,7 @@ optional step:
 
 To create and run the container, the following should work from the command-line, 
 
-    ~/.local/bin/debian-pull-tumblr-9.5.2  
+    ~/.local/bin/debian-pull-tumblr-9.6.1  
 
 or,
 
@@ -128,9 +128,9 @@ or,
                -it \
                -v /etc/localtime:/etc/localtime:ro \
                -v /media/sf_ImageDownloads:/data \
-               -v ${HOME}/.config/docker/debian-pull-tumblr-9.5.2:/root \
-               --name=debian-pull-tumblr-9.5.2 \
-           ewsdocker/debian-pull-tumblr:9.5.2 lms-tumblr clipart-autumn    
+               -v ${HOME}/.config/docker/debian-pull-tumblr-9.6.1:/root \
+               --name=debian-pull-tumblr-9.6.1 \
+           ewsdocker/debian-pull-tumblr:9.6.1 lms-tumblr clipart-autumn    
 
 ____  
 
@@ -148,7 +148,7 @@ It is important to keep the time and date on docker _host_ files that have been 
     -v /etc/localtime:/etc/localtime:ro  
 
 ____  
-**Copyright © 2018. EarthWalk Software.**  
+**Copyright © 2018, 2019. EarthWalk Software.**  
 **Licensed under the GNU General Public License, GPL-3.0-or-later.**  
 
 This file is part of **ewsdocker/debian-pull-tumblr**.  

@@ -70,17 +70,16 @@ RUN apt-get -y update \
  && apt-get -y upgrade \
  && apt-get -y install \
                bash-completion \
- && chmod -R +x /usr/local/bin/* \
  && printf "${LMSBUILD_DOCKER} (${LMSBUILD_PACKAGE}), %s @ %s\n" `date '+%Y-%m-%d'` `date '+%H:%M:%S'` >> /etc/ewsdocker-builds.txt \ 
- && ln -s /usr/bin/tumblr.sh /usr/bin/lms-tumblr \
- && apt-get clean 
+ && apt-get clean all
 
 # =========================================================================
 
 COPY scripts/. /
 
-RUN chmod 775 /usr/bin/tumblr \
- && chmod 775 /usr/bin/tumblr.sh   
+RUN chmod -R +x /usr/local/bin/* \
+ && chmod 775 /usr/bin/lms/tumblr.sh \
+ && ln -s /usr/bin/lms/tumblr.sh /usr/bin/lms-tumblr 
 
 # =========================================================================
 

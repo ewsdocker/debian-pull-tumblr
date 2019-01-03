@@ -8,15 +8,15 @@
 # =========================================================================
 #
 # @author Jay Wheeler.
-# @version 0.1.0
-# @copyright © 2017, 2018. EarthWalk Software.
+# @version 0.1.1
+# @copyright © 2017, 2018, 2019. EarthWalk Software.
 # @license Licensed under the GNU General Public License, GPL-3.0-or-later.
 # @package debian-pull-tumblr
 # @subpackage tumblr.sh
 #
 # =========================================================================
 #
-#	Copyright © 2018. EarthWalk Software
+#	Copyright © 2017, 2018, 2019. EarthWalk Software
 #   This file is part of ewsdocker/debian-pull-tumblr.
 #
 #   ewsdocker/debian-pull-tumblr is free software: you can redistribute 
@@ -41,7 +41,7 @@ declare    tumblr_filename
 
 # =========================================================================
 
-. /usr/local/lib/lms/lmsconDisplay.sh
+. /usr/local/lib/lms/lmsconDisplay-0.0.2.bash
 
 # =========================================================================
 #

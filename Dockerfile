@@ -44,6 +44,14 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # =========================================================================
 
+ARG TMBLR_CAT
+ARG TMBLR_LIMIT
+ARG TMBLR_LISTS
+ARG TMBLR_CATALOGS
+ARG TMBLR_SITES
+
+# =========================================================================
+
 ENV LMSBUILD_VERSION="9.6.0" 
 ENV LMSBUILD_NAME=debian-pull-tumblr 
 ENV LMSBUILD_REPO=ewsdocker 
@@ -57,12 +65,12 @@ ENV LMSBUILD_PACKAGE="${LMSBUILD_PARENT}, tumblr v. 0.1.0"
 
 ENV LMSOPT_QUIET=0
 
-ENV TUMBLR_CAT=""
-ENV TUMBLR_LIMIT="200k"
-
-ENV TUMBLR_LISTS="tumblr-lists"
-ENV TUMBLR_CATALOGS="tumblr-catalogs"
-ENV TUMBLR_SITES="tumblr-sites"
+ENV \
+    TUMBLR_CAT=${TMBLR_CAT:-""} \
+    TUMBLR_LIMIT=${TMBLR_LIMIT:-"200k"} \
+    TUMBLR_LISTS=${TMBLR_LISTS:-"tumblr-lists"} \
+    TUMBLR_CATALOGS=${TMBLR_CATALOGS:-"tumblr-catalogs"} \
+    TUMBLR_SITES=${TMBLR_SITES:-"tumblr-sites"}
 
 # =========================================================================
 
